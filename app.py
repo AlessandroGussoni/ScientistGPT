@@ -10,8 +10,7 @@ class TabularQA:
     _ALLOWED_PROGRAMMING_LANGUAGES = ('Python', 'SQL')
     
     def __init__(self):
-        KEY = "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"
-        openai.api_key = KEY
+        openai.api_key = os.environ["KEY"]
         self.MODEL = "gpt-3.5-turbo"
         self.t = 0.1
 
